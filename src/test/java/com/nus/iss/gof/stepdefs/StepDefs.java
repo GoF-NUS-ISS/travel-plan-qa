@@ -14,12 +14,15 @@ public class StepDefs {
 
     WebDriver driver;
     Scenario s;
-    String url_create_travel_plan = "http://localhost:4200/FormCreation";
+    String url_create_travel_plan = "http://travel-plan-ui:4200/FormCreation";
 
     @Before
     public void before(Scenario s){
         this.s = s;
+    }
 
+    @Given("User is logged in")
+    public void user_is_logged_in() {
         System.setProperty("webdriver.chrome.driver","chromedriver_linux");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
@@ -27,10 +30,6 @@ public class StepDefs {
         //driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         s.write("Chrome Browser invoked");
-    }
-
-    @Given("User is logged in")
-    public void user_is_logged_in() {
         s.write("User is logged in is to be implemented*************");
         throw new cucumber.api.PendingException();
     }
