@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.*;
 public class StepDefsApi {
     RequestSpecification req_spec=null;
     Response resp=null;
-    public String travel_api_server = "http://travel-plan-api:8001/";
+    public String travel_api_server = "http://localhost:8001/";
 
     @Given("API is up and running")
     public void api_is_up_and_running() {

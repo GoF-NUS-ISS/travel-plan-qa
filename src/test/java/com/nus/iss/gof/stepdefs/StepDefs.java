@@ -14,7 +14,7 @@ public class StepDefs {
 
     WebDriver driver;
     Scenario s;
-    String url_create_travel_plan = "http://travel-plan-ui:4200/FormCreation";
+    String url_create_travel_plan = "http://localhost:4200/FormCreation";
 
     @Before
     public void before(Scenario s){
